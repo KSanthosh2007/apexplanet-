@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One Piece | Straw Hat Pirates</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <h1>☠ ONE PIECE</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#crew">Crew</a></li>
+                <li><a href="#register">Join Crew</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#todo">Adventure List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-subtitle">THE JOURNEY OF A LIFETIME</p>
+
+            <h2>WELCOME TO THE GRAND LINE</h2>
+
+            <p class="hero-description">
+                Set sail, follow your dreams and discover the greatest treasure.
+            </p>
+
+            <a href="#about" class="hero-btn">ENTER THE GRAND LINE</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <h2>THE WORLD OF ONE PIECE</h2>
+
+        <div class="about-content">
+
+            <img src="images/crew.jpg"
+                 alt="Straw Hat Pirates"
+                 class="about-image">
+
+            <div class="about-text">
+
+                <h3>A JOURNEY BEYOND THE SEAS</h3>
+
+                <p>
+                    One Piece follows Monkey D. Luffy and his friends
+                    on their journey across the seas to find the legendary
+                    treasure known as One Piece.
+                </p>
+
+                <p>
+                    Along the way, they discover friendship, courage,
+                    unforgettable memories and the meaning of freedom.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CREW -->
+    <section id="crew" class="crew">
+
+        <h2>MEET THE STRAW HAT CREW</h2>
+
+        <p class="section-description">
+            Every member has a dream. Every dream has a story.
+        </p>
+
+        <div class="crew-container">
+
+            <div class="crew-card">
+                <img src="images/luffy.jpg" alt="Monkey D. Luffy" class="crew-image">
+
+                <div class="crew-info">
+                    <h3>MONKEY D. LUFFY</h3>
+                    <p>Captain of the Straw Hat Pirates.</p>
+                </div>
+            </div>
+
+            <div class="crew-card">
+                <img src="images/zoro.jpg" alt="Roronoa Zoro" class="crew-image">
+
+                <div class="crew-info">
+                    <h3>RORONOA ZORO</h3>
+                    <p>The swordsman aiming to become the world's greatest.</p>
+                </div>
+            </div>
+
+            <div class="crew-card">
+                <img src="images/sanji.jpg" alt="Sanji" class="crew-image">
+
+                <div class="crew-info">
+                    <h3>VINSMOKE SANJI</h3>
+                    <p>The cook of the Straw Hat Pirates.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JOIN CREW FORM -->
+    <section id="register" class="register">
+
+        <h2>JOIN THE STRAW HAT CREW</h2>
+
+        <p>Every great adventure begins with a dream.</p>
+
+        <form id="contactForm">
+
+            <label for="name">Pirate Name</label>
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name"
+                   required>
+
+            <label for="email">Email Address</label>
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <label for="character">Favourite Character</label>
+
+            <select id="character" required>
+                <option value="">Choose your character</option>
+                <option value="Monkey D. Luffy">Monkey D. Luffy</option>
+                <option value="Roronoa Zoro">Roronoa Zoro</option>
+                <option value="Sanji">Sanji</option>
+                <option value="Shanks">Shanks</option>
+                <option value="Portgas D. Ace">Portgas D. Ace</option>
+            </select>
+
+            <label for="message">Your Dream</label>
+
+            <textarea id="message"
+                      placeholder="What is your dream?"
+                      required></textarea>
+
+            <button type="submit">JOIN THE CREW</button>
+
+            <p id="errorMessage" role="alert"></p>
+            <p id="successMessage" role="status"></p>
+
+        </form>
+
+
+        <!-- REGISTERED CREW MEMBERS -->
+        <div class="crew-members">
+
+            <h3>NEW CREW MEMBERS</h3>
+
+            <div id="crewMembers">
+                <p class="empty-message">No new crew members yet. Be the first!</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+    <section id="memories" class="memories">
+
+        <h2>MEMORIES THAT LAST FOREVER</h2>
+
+        <p class="section-description">
+            Some bonds remain unforgettable across every ocean.
+        </p>
+
+
+        <!-- FEATURED SHANKS MEMORY -->
+        <div class="memory-card">
+
+            <img src="images/shanks.jpg"
+                 alt="Shanks and young Luffy"
+                 class="memory-image">
+
+            <div class="memory-text">
+
+                <h3>THE MAN WHO INSPIRED A DREAM</h3>
+
+                <p>
+                    A promise, a straw hat and a dream
+                    that would change the world.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADD MEMORY FORM -->
+        <div class="memory-upload">
+
+            <h3>ADD YOUR OWN ADVENTURE MEMORY</h3>
+
+            <p>Save your favourite moments and memories.</p>
+
+            <form id="memoryForm">
+
+                <label for="memoryImage">Choose a Photo</label>
+
+                <input type="file"
+                       id="memoryImage"
+                       accept="image/*"
+                       required>
+
+                <label for="memoryTitle">Memory Title</label>
+
+                <input type="text"
+                       id="memoryTitle"
+                       placeholder="Enter memory title"
+                       required>
+
+                <label for="memoryDescription">Description</label>
+
+                <textarea id="memoryDescription"
+                          placeholder="Describe your memory"
+                          required></textarea>
+
+                <button type="submit">SAVE MEMORY</button>
+
+                <p id="memoryMessage" role="status"></p>
+
+            </form>
+
+        </div>
+
+
+        <!-- SAVED MEMORIES APPEAR HERE -->
+        <div id="memoryGallery" class="memory-gallery"></div>
+
+    </section>
+
+
+    <!-- ADVENTURE LIST -->
+    <section id="todo" class="todo">
+
+        <h2>MY ADVENTURE LIST</h2>
+
+        <p>Every adventure starts with a new goal.</p>
+
+        <div class="todo-input">
+
+            <input type="text"
+                   id="taskInput"
+                   placeholder="Enter a place to explore"
+                   aria-label="Place for your next adventure">
+
+            <button id="addTaskBtn" type="button">ADD TASK</button>
+
+        </div>
+
+        <p id="taskMessage" role="status"></p>
+
+        <div id="taskList" class="task-list"></div>
+
+        <p class="journey-tagline">A long journey awaits...</p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>THE GRAND ADVENTURE CONTINUES...</h3>
+
+        <p>© 2026 One Piece Fan Website</p>
+
+        <p>Created by Santhosh K</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

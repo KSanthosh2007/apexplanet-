@@ -1,0 +1,782 @@
+
+/* =========================================
+   ONE PIECE - CINEMATIC WEBSITE
+========================================= */
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #080d18;
+    color: white;
+    line-height: 1.6;
+}
+
+section {
+    padding: 90px 10%;
+}
+
+h2 {
+    color: #f5c542;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.section-description {
+    color: #cbd5e1;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* NAVIGATION */
+
+header {
+    background: rgba(5, 10, 20, 0.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(245, 197, 66, 0.25);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+.navbar h1 {
+    color: #f5c542;
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #f5c542;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(5, 10, 20, 0.35),
+            rgba(5, 10, 20, 0.80)
+        ),
+        url("images/hero.jpg") center center / cover no-repeat;
+}
+
+.hero-content {
+    padding: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-subtitle {
+    color: #f5c542;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 65px;
+    color: #ffd700;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #f5c542;
+    color: #101522;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(245, 197, 66, 0.4);
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ABOUT */
+
+.about {
+    background: #101827;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.about-image {
+    width: 48%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid #35445d;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h3 {
+    color: #f5c542;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+
+/* CREW */
+
+.crew {
+    background: #080d18;
+    text-align: center;
+}
+
+.crew-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.crew-card {
+    background: #141f31;
+    border: 1px solid #283750;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.crew-card:hover {
+    transform: translateY(-10px);
+    border-color: #f5c542;
+    box-shadow: 0 10px 30px rgba(245, 197, 66, 0.12);
+}
+
+.crew-image {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.crew-info {
+    padding: 25px 20px;
+}
+
+.crew-card h3 {
+    color: #f5c542;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.crew-card p {
+    color: #cbd5e1;
+}
+
+
+/* JOIN CREW */
+
+.register {
+    background: #101827;
+    text-align: center;
+}
+
+.register > p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+#contactForm {
+    max-width: 550px;
+    margin: auto;
+    padding: 35px;
+    background: #172337;
+    border: 1px solid #35445d;
+    border-radius: 15px;
+    text-align: left;
+}
+
+#contactForm label,
+#memoryForm label {
+    display: block;
+    color: #f5c542;
+    font-weight: 600;
+    margin: 17px 0 8px;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea,
+#memoryForm input,
+#memoryForm textarea {
+    width: 100%;
+    padding: 14px;
+    background: #080d18;
+    border: 1px solid #35445d;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus,
+#memoryForm input:focus,
+#memoryForm textarea:focus {
+    border-color: #f5c542;
+}
+
+#contactForm textarea,
+#memoryForm textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#contactForm button,
+#memoryForm button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: #d93642;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contactForm button:hover,
+#memoryForm button:hover {
+    background: #f5c542;
+    color: #080d18;
+}
+
+#errorMessage,
+#successMessage,
+#memoryMessage,
+#taskMessage {
+    text-align: center;
+    margin-top: 12px;
+}
+
+#errorMessage {
+    color: #ff7777;
+}
+
+#successMessage,
+#memoryMessage {
+    color: #69e69b;
+}
+
+#taskMessage {
+    color: #f5c542;
+}
+
+
+/* NEW CREW MEMBERS */
+
+.crew-members {
+    max-width: 850px;
+    margin: 55px auto 0;
+}
+
+.crew-members h3 {
+    color: #f5c542;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.crew-member-card {
+    background: #172337;
+    border: 1px solid #35445d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 12px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.crew-member-card h4 {
+    color: #f5c542;
+    font-size: 18px;
+}
+
+.crew-member-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.empty-message {
+    color: #9ca9bb;
+    text-align: center;
+}
+
+
+/* MEMORIES */
+
+.memories {
+    background: #080d18;
+    text-align: center;
+}
+
+.memory-card {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 55px;
+    background: #172337;
+    border: 1px solid #35445d;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-6px);
+    border-color: #f5c542;
+}
+
+.memory-image {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.memory-text {
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.memory-text h3 {
+    color: #f5c542;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.memory-text p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+
+/* MEMORY UPLOAD */
+
+.memory-upload {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #172337;
+    border: 1px solid #35445d;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.memory-upload h3 {
+    color: #f5c542;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.memory-upload > p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+
+/* SAVED MEMORY GALLERY */
+
+.memory-gallery {
+    max-width: 1000px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.saved-memory {
+    background: #172337;
+    border: 1px solid #35445d;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.saved-memory:hover {
+    transform: translateY(-5px);
+    border-color: #f5c542;
+}
+
+.saved-memory img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.saved-memory-content {
+    padding: 20px;
+}
+
+.saved-memory-content h3 {
+    color: #f5c542;
+    margin-bottom: 10px;
+}
+
+.saved-memory-content p {
+    color: #cbd5e1;
+    overflow-wrap: anywhere;
+}
+
+.delete-memory-btn {
+    margin-top: 15px;
+    padding: 9px 16px;
+    background: #d93642;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* ADVENTURE LIST */
+
+.todo {
+    background: #101827;
+    text-align: center;
+}
+
+.todo > p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.todo > .journey-tagline {
+    color: #f5c542;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 35px 0 0;
+}
+
+.todo-input {
+    display: flex;
+    max-width: 650px;
+    gap: 12px;
+    margin: auto;
+}
+
+.todo-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    background: #172337;
+    border: 1px solid #35445d;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+}
+
+.todo-input button {
+    padding: 14px 25px;
+    background: #f5c542;
+    color: #101522;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.todo-input button:hover {
+    background: white;
+}
+
+
+/* TASK CARDS */
+
+.task-list {
+    max-width: 750px;
+    margin: 30px auto 0;
+}
+
+.task-card {
+    background: #172337;
+    border: 1px solid #35445d;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.task-card.completed {
+    border-color: #69e69b;
+    opacity: 0.8;
+}
+
+.task-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-details h3 {
+    color: #f5c542;
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+.task-details p {
+    color: #cbd5e1;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.task-details .task-status {
+    color: #f5c542;
+}
+
+.task-card.completed .task-details h3,
+.task-card.completed .task-status {
+    color: #69e69b;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.task-actions button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.complete-btn {
+    background: #69e69b;
+    color: #080d18;
+}
+
+.delete-btn {
+    background: #d93642;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #050912;
+    text-align: center;
+    padding: 30px;
+    color: #9ca9bb;
+    border-top: 1px solid #283750;
+}
+
+footer h3 {
+    color: #f5c542;
+    margin-bottom: 10px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .crew-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .crew-container {
+        grid-template-columns: 1fr;
+    }
+
+    .crew-image {
+        height: 320px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .navbar h1 {
+        font-size: 23px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .memory-image {
+        height: 260px;
+    }
+
+    .memory-text {
+        padding: 22px 15px;
+    }
+
+    .memory-upload {
+        padding: 22px;
+    }
+
+    .memory-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .task-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-actions button {
+        flex: 1;
+    }
+
+    #contactForm {
+        padding: 22px;
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+}
