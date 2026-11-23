@@ -1,0 +1,765 @@
+
+/* ============================================
+   TRAVEL EXPLORER
+   Luxury Travel Editorial Design
+   Complete Responsive Stylesheet
+============================================ */
+
+
+/* 01. DESIGN SYSTEM */
+
+:root {
+    --primary: #354638;
+    --primary-dark: #202e24;
+    --gold: #b49a70;
+    --gold-light: #d9c39e;
+    --cream: #f5f1e8;
+    --beige: #e8e0d2;
+    --white: #ffffff;
+    --charcoal: #242722;
+    --muted: #77766d;
+
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'DM Sans', sans-serif;
+
+    --container: 1300px;
+}
+
+
+/* 02. RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+::selection {
+    background: var(--gold);
+    color: white;
+}
+
+
+/* 03. NAVIGATION */
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(245, 241, 232, 0.97);
+    border-bottom: 1px solid rgba(53, 70, 56, 0.1);
+}
+
+.navbar {
+    max-width: var(--container);
+    margin: auto;
+    padding: 20px 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--charcoal);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    padding: 12px 23px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--gold);
+    color: var(--primary-dark);
+}
+
+
+/* 04. HERO SECTION */
+
+.hero {
+    min-height: 720px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18, 31, 23, 0.78),
+            rgba(18, 31, 23, 0.12)
+        ),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e")
+        center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    padding: 100px 10%;
+
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 780px;
+    animation: fadeUp 1.1s ease;
+}
+
+.hero-tag {
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.hero h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(48px, 6.5vw, 88px);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    margin: 28px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold-light);
+}
+
+.hero-content p {
+    max-width: 550px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--primary-dark);
+    padding: 15px 29px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: var(--white);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.65);
+    color: var(--white);
+    padding: 14px 29px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.hero-scroll {
+    position: absolute;
+    right: 9%;
+    bottom: 32px;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--white);
+}
+
+
+/* 05. COMMON SECTION STYLES */
+
+.section {
+    padding: 115px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-heading span,
+.quiz-content > span {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.section-heading h2,
+.quiz-content h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(36px, 5vw, 57px);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--primary);
+    margin: 17px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* 06. DESTINATION SECTION */
+
+.destinations {
+    background: var(--cream);
+}
+
+.destination-grid {
+    max-width: var(--container);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.08);
+}
+
+.destination-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(16, 24, 17, 0.85),
+        rgba(16, 24, 17, 0.02) 70%
+    );
+}
+
+.destination-info {
+    position: absolute;
+    z-index: 2;
+    bottom: 32px;
+    left: 30px;
+    color: var(--white);
+}
+
+.destination-info span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--gold-light);
+}
+
+.destination-info h3 {
+    font-family: var(--heading-font);
+    font-size: 31px;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+
+/* 07. EXPERIENCES SECTION */
+
+.experiences {
+    background: #eae9df;
+}
+
+.experience-grid {
+    max-width: var(--container);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.experience-card {
+    background: var(--cream);
+    padding: 45px 35px;
+    border: 1px solid rgba(53, 70, 56, 0.08);
+    transition: all 0.4s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 35px rgba(30, 45, 32, 0.08);
+}
+
+.experience-card span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+.experience-card h3 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: 500;
+    margin: 20px 0 12px;
+}
+
+.experience-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+
+/* 08. WEATHER SECTION */
+
+.weather {
+    background: var(--cream);
+}
+
+.weather-container {
+    max-width: 720px;
+    margin: auto;
+    padding: 40px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.weather-container input {
+    flex: 1;
+    min-width: 200px;
+    padding: 16px;
+
+    border: 1px solid var(--border);
+    background: var(--cream);
+    outline: none;
+
+    font-size: 13px;
+    transition: border 0.3s ease;
+}
+
+.weather-container input:focus {
+    border-color: var(--gold);
+}
+
+.weather-container button {
+    background: var(--primary);
+    color: var(--white);
+    padding: 15px 24px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.weather-container button:hover {
+    background: var(--gold);
+    color: var(--primary-dark);
+}
+
+.weather-container button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#weatherResult {
+    width: 100%;
+    padding: 20px 5px;
+    margin-top: 10px;
+
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+#weatherResult h3 {
+    color: var(--primary);
+    font-family: var(--heading-font);
+    font-size: 25px;
+}
+
+#weatherResult h2 {
+    color: var(--gold);
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+
+/* 09. TRAVEL QUIZ */
+
+.quiz {
+    background: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+}
+
+.quiz-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.quiz-content > span {
+    color: var(--gold-light);
+}
+
+.quiz-content h2 {
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.quiz-content p {
+    color: #c8d0c8;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 20px 0 32px;
+}
+
+.quiz-content .primary-btn {
+    border: none;
+    cursor: pointer;
+}
+
+#quizContainer {
+    margin-top: 40px;
+}
+
+#quizContainer h3 {
+    font-family: var(--heading-font);
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 28px;
+    color: var(--white);
+}
+
+.quiz-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.quiz-option {
+    padding: 15px 25px;
+    background: var(--cream);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.quiz-option:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+#quizContainer p {
+    font-size: 12px;
+    color: #c8d0c8;
+    margin-top: 20px;
+}
+
+#quizContainer h2 {
+    font-family: var(--heading-font);
+    font-size: 38px;
+    color: var(--gold-light);
+    margin: 15px 0;
+}
+
+
+/* 10. FOOTER */
+
+.footer {
+    background: #17251c;
+    color: var(--white);
+    text-align: center;
+    padding: 65px 20px 30px;
+}
+
+.footer .logo {
+    color: var(--cream);
+}
+
+.footer p {
+    font-size: 12px;
+    color: #b8c0b8;
+    margin-top: 14px;
+}
+
+.footer .copyright {
+    max-width: 700px;
+    margin: 35px auto 0;
+    padding-top: 23px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* 11. ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 12. TABLET RESPONSIVENESS */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 25px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .destination-grid,
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 90px 6%;
+    }
+
+}
+
+
+/* 13. MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        padding: 17px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 620px;
+        padding: 65px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-scroll {
+        right: 7%;
+        font-size: 8px;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .destination-grid,
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 400px;
+    }
+
+    .experience-card {
+        padding: 35px 28px;
+    }
+
+    .weather-container {
+        padding: 22px;
+    }
+
+    .weather-container input,
+    .weather-container button {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .quiz-content h2 {
+        font-size: 34px;
+    }
+
+    .quiz-options {
+        flex-direction: column;
+    }
+
+    .quiz-option {
+        width: 100%;
+    }
+
+}
+
+
+/* 14. SMALL MOBILE DEVICES */
+
+@media screen and (max-width: 380px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-tag {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 13px 19px;
+        font-size: 10px;
+    }
+
+}
